@@ -1,0 +1,45 @@
+# Golang Assignment 2
+
+## Part 1 [20 marks]
+
+1. Please create a code repository in [github.com](https://github.com) called: ``apple-server``.
+
+2. Structure the app using the appropriate ``cmd`, ``internal``, ``controllers`` and ``utils`` packages.
+
+3. Create the following API endpoints:
+
+    * (a) ``/version`` - this is a ``GET`` request which will return the version number of your app.
+    * (b) ``/hello`` - this is a ``POST`` request which will receive the user's name as ``REQUEST BODY`` and return a friendly hello message with the user's name.
+
+4. In your ``README.md`` file, please write the ``curl`` commands you would use to test our your APIs.
+
+## Part 2 [20 marks]
+
+1. Please create a code repository in [github.com](https://github.com) called: ``blueberry-server``.
+
+2. Structure the app using the appropriate ``cmd`, ``internal``, ``controllers`` and ``utils`` packages.
+
+3. Create a ``password.go`` file used for hashing passwords.
+
+4. Create the following API endpoints:
+
+    * (a) ``/register`` - this is a ``POST`` request which will receive the user's ``email`` and ``password`` in the ``REQUEST BODY`` and return a friendly hello message saying they have registered and they need to log in.
+    * (b) ``/login`` - this is a ``POST`` request which will receive the user's ``email`` and ``password`` in the ``REQUEST BODY`` and return either ``TRUE`` or ``FALSE`` depending on whether the email and password are valid.
+
+5. In your ``README.md`` file, please write the ``curl`` commands you would use to test our your APIs.
+
+## Part 3 [20 marks]
+
+1. Please create a code repository in [github.com](https://github.com) called: ``cranberry-server``.
+
+2. Structure the app using the appropriate ``cmd`, ``internal``, ``controllers`` and ``utils`` packages.
+
+3. Create the following API endpoints:
+
+    * (a) ``/add`` - this is a ``POST`` request which will receive a ``number` in the ``REQUEST BODY``.
+    * (b) ``/calc`` - this is a ``GET`` request which will return the following computations based on the numbers saved: average, sum, and count.
+
+4. In your ``README.md`` file, please write the ``curl`` commands you would use to test our your APIs.
+
+
+Sent from my iPad

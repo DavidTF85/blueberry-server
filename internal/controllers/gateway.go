@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"blueberry-server/utils"
-	"blueberry-server/utils/models"
+	"GitHub/blueberry-server/utils"
+	"GitHub/blueberry-server/utils/models"
 
 	cache "github.com/patrickmn/go-cache"
 )

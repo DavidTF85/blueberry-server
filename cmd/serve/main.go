@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"blueberry-server/internal/controllers"
+	"GitHub/blueberry-server/internal/controllers"
 )
 
 func main() {

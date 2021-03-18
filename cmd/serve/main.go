@@ -55,8 +55,8 @@ func stopMainRuntimeLoop(srv *http.Server) {
 	}()
 
 	if err := srv.Shutdown(ctx); err != nil {
-		log.Fatalf("Server Shutdown Failed:%+v", err)
+		log.Fatalf("Server Shutdown Failed, you fu*&&$@ off:%+v", err)
 	}
 	log.Printf("Graceful shutdown finished.")
-	log.Print("Server Exited")
+	log.Print("Server Exited.. bye have a F*&^%@ day")
 }

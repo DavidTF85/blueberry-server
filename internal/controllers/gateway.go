@@ -19,13 +19,11 @@ func (c *Controller) postRegister(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if requestData.Email == "" || requestData.Password == "" {
-		http.Error(w, "Fields are not properly formatted", http.StatusBadRequest)
+		http.Error(w, "Fields are not properly you dumdum", http.StatusBadRequest)
 		return
 	}
 
-	hashedPassword := utils.GenerateHashedPassword(w, r, requestData.Password)
-	c.cache.Set("email", requestData.Email, cache.NoExpiration)
-	c.cache.Set("hashed_password", string(hashedPassword), cache.NoExpiration)
+	c.cache.Set("e-mail", requestData.Email, cache.NoExpiration)
 
 	var responseData = &models.RegisterResponse{
 		Message: "You have successfully registered. Please login to continue!",
@@ -52,14 +50,14 @@ func (c *Controller) postLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if requestData.Email == "" || requestData.Password == "" {
-		http.Error(w, "Fields are not properly formatted", http.StatusBadRequest)
+		http.Error(w, "Fields are not properly you dumdum", http.StatusBadRequest)
 		return
 	}
 
 	if cachedPasskey, found := c.cache.Get("hashed_password"); found {
 		hashedPassword = cachedPasskey.(string)
 	}
-	cachedEmail, found := c.cache.Get("email")
+	cachedEmail, found := c.cache.Get("e-mail")
 	if found {
 		email = cachedEmail.(string)
 	}
@@ -69,13 +67,13 @@ func (c *Controller) postLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if utils.CompareHashedPassword(w, r, []byte(hashedPassword), []byte(requestData.Password)) == false {
-		http.Error(w, "The password you entered is incorrect", http.StatusBadRequest)
+	if utils.ComparePassword(w, r, []byte(Password), []byte(requestData.Password)) == false {
+		http.Error(w, "The password incorrect--U idiot", http.StatusBadRequest)
 		return
 	}
 
 	var responseData = &models.LoginResponse{
-		Message: "Success! You're Logging in",
+		Message: "Niceee U Logging in--welcomo Borat",
 	}
 	err = json.NewEncoder(w).Encode(&responseData)
 	if err != nil {

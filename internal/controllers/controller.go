@@ -13,7 +13,7 @@ type Controller struct {
 }
 
 func New() *Controller {
-	cache := cache.New(5*time.Minute, 10*time.Minute)
+	cache := cache.New(6*time.Minute, 66*time.Minute)
 
 	return &Controller{
 		cache: cache,
